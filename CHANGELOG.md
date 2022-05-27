@@ -1,8 +1,8 @@
 # changelog
-all notable changes to this repository will be documented in this file
+notable changes to this repository are documented here
 
 # upcoming releases
-## `0.2.0-beta`
+## `0.1.0`
 ### added
 - `code/hotkeys`
 	- [`readme.md`](code/hotkeys/README.md)
@@ -10,14 +10,21 @@ all notable changes to this repository will be documented in this file
 - `code/experiments`
 	- [`readme.md`](code/experiments/README.md)
 	- [`conjugateFR.ahk`](code/experiments/conjugateFR.ahk)
+- `code/scripts`
+	- [`readme.md`](code/scripts/README.md)
+	- [`autocorrect.ahk`](code/scripts/autocorrect.ahk)
+	- [`directives.ahk`](code/scripts/directives.ahk) — recommended directives for use with v2
+	- [`windowSpy.ahk`](code/scripts/WindowSpy.ahk) — v2 compatible version of WindowSpy
+
+### updated
+- `backups/default.code-workspace`
 
 <br>
 
 # current release
 ## `0.1.0-beta` — 2022-05-27
 ### added
-- `code/functions`
-- this changelog file
+- [`changelog`](CHANGELOG.md)
 - [`code`](code) folder
 	- [`scripts`](code/scripts) folder
 	- [`functions`](code/functions) folder
