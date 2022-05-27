@@ -2,7 +2,19 @@
 all notable changes to this repository will be documented in this file
 
 # upcoming releases
-## `0.1.0`
+## `0.2.0-beta`
+### added
+- `code/hotkeys`
+	- `readme.md` <!--(code/hotkeys/README.md)-->
+	- `hotkeys.ahk` <!--(code/hotkeys/hotkeys.ahk)-->
+- `code/experiments`
+	- `readme.md` <!--(code/experiments/README.md)-->
+	- `conjugateFR.ahk` <!--(code/experiments/conjugateFR.ahk)-->
+
+<br>
+
+# current release
+## `0.1.0-beta` — 2022-05-27
 ### added
 - `code/functions`
 	- [`clipSend.ahk`](code/functions/clipSend.ahk)
@@ -23,21 +35,12 @@ all notable changes to this repository will be documented in this file
 	- [`toggleDiscord.ahk`](code/functions/toggleDiscord.ahk)
 	- [`volumeChange.ahk`](code/functions/volumeChange.ahk)
 
-<!--
-- `code/hotkeys`
-	- [`hotkeys.ahk`](code/hotkeys/hotkeys.ahk)
-
-- `code/experiments`
-	- [`readme.md`](code/experiments/readme.md)
-	- [`conjugateFR.ahk`](code/experiments/conjugateFR.ahk)
--->
-
 ### changed
 - newly added files and folders are now [linked](#) to make them clear and easily accessible
 
 <br>
 
-# current release
+# previous releases
 ## `beta` — 2022-05-27
 ### added
 - [`backups`](backups) folder
@@ -58,9 +61,6 @@ all notable changes to this repository will be documented in this file
 ### fixed
 - broken links in [readme.md](README.md)
 
-<br>
-
-# previous releases
 ## `alpha` — 2022-05-27
 ### added
 - this changelog file
