@@ -6,7 +6,30 @@ all notable changes to this repository will be documented in this file
 -->
 
 # current release
-## `alpha` - 2022-05-27
+## `beta` — 2022-05-27
+### added
+- [`backups`](backups) folder
+	- `default.code-workspace`
+	- `ahk.tmLanguage.json`
+- [`docs`](docs) folder
+	- `codeReference.md`
+	- `postMessages.md`
+
+### updated
+- [`readme.md`](README.md)
+	- added `version`, `license` and `status` badges
+	- added `changelog` section
+
+### changed
+- renamed license → [license.md](LICENSE.md)
+
+### fixed
+- broken links in [readme.md](README.md)
+
+<br>
+
+# previous releases
+## `alpha` — 2022-05-27
 ### added
 - this changelog file
 - [`code`](code) folder
@@ -19,10 +42,6 @@ all notable changes to this repository will be documented in this file
 - [`readme.md`](README.md)
 	- included an index
 	- added a disclaimer 
-
-<!--
-# previous releases
--->
 
 ---
 format based on [keep a changelog](https://keepachangelog.com/)
