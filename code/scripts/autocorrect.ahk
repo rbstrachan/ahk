@@ -1,6 +1,4 @@
 ﻿
-#Hotstring x b0
-
 ;*******************************************************************************;
 ;							Autocorrect - English								;
 ;*******************************************************************************;
@@ -10,25 +8,26 @@
 
 ; hotstrings that replace a phrase do not currently work natively (le votre → le le vôtre)
 
+#Hotstring x b0
 ; abbreviations
 ; the prefix '>' is used when an abbreviation may also be used without expansion
 :*:afaik::clipSend("as far as I know")
 :*:btw::clipSend("by the way")
 :*:lmk::clipSend("let me know if I can help you with anything else 😊")
 :*:np::clipSend("no problem")
-:*:rvw:: {
-	currentDate := formatTime(, "yyyy-MM-dd HH:mm:ss")
-;	gui, new
-;	gui, add, text,, enter verb in past tense:
-;	gui, add, edit, vverb
-;	gui, add, button, default, okay
-;	gui, show,, which verb do you want
-;	return
-;
-;	buttonOkay:
-;	gui, submit
-	clipSend("——" currentDate " — reviewed by Reiwa")
-}
+; :*:rvw:: {
+; 	currentDate := formatTime(, "yyyy-MM-dd HH:mm:ss")
+; ;	gui, new
+; ;	gui, add, text,, enter verb in past tense:
+; ;	gui, add, edit, vverb
+; ;	gui, add, button, default, okay
+; ;	gui, show,, which verb do you want
+; ;	return
+; ;
+; ;	buttonOkay:
+; ;	gui, submit
+; 	clipSend("——" currentDate " — reviewed by Reiwa")
+; }
 :*:tldr::clipSend("tl:dr")
 :*:>ahk::clipSend("autohotkey") ; > used as ahk is also acceptable in some situations
 :*:>smth::clipSend("something")
@@ -41,9 +40,10 @@
 ; autocomplete parenthesis and quote marks outside of VSC
 #HotIf !winActive("Visual Studio Code")
 ; :*b0:``::``{Left} ; automatically type the other '`' character to prevent me from forgetting
-:*x:¬¬¬::send("``````ahk{Enter 2}``````{Up}") ; create an ahk codeblock
+:*b:¬¬¬::send("``````ahk{Enter 2}``````{Up}") ; create an ahk codeblock
 #HotIf
 
+#Hotstring x0 b
 ; emojis and special characters
 ; the prefix ':' is used for emojis and most special characters
 :*::+1::👍
@@ -76,7 +76,7 @@
 :c::u::↑			; using :*: for short hotstrings may interfere with other commands. see below also.
 :c::d::↓
 :c*::gbp::£00.00+{Left 5}
-:c*::usd::$00.00+{Left 5}
+:c*::usd::$00.00+{Left 5} 
 :c*::cad::C$00.00+{Left 5}
 :c*::yen::¥0,000+{Left 5}
 :c*:<<::←{Space}	; use :c: to remain consistent with similar commands
@@ -84,7 +84,7 @@
 :c*:<>::↔{Space}	; use :c: to remain consistent with similar commands
 :c*?::en::–			; en dash - means "to" or "through" - used to range numbers (chapters 1–5), report scores (he won 2–1), show a contradiction or connection (liberal–conservative; London–France–Japan flight), etc.
 :c*?::em::—			; em dash - used to replace commas, colons and brackets when a longer pause or greater emphasis is needed
-
+#Hotstring x b0
 ::acn::clipSend("can")
 ::accomodation::clipSend("accommodation")
 ::acheive::clipSend("achieve")
@@ -178,7 +178,7 @@
 ;*******************************************************************************;
 ;							Autocorrect - French								;
 ;*******************************************************************************;
-
+#Hotstring x0 b
 ; les caractères individuels
 ; note: some characters are not used in french and hence are commented out to prevent unnecessary collisions
 :*?:a``::à	; double backtick is required as the backtick is a reserved character in AHK
@@ -193,7 +193,7 @@
 ; :*?:u/::ú
 :*?:u^::û
 :*?:u;::ü
-:*?:e``::è
+; :*?:e``::è
 :*?:e/::é
 :*?:e^::ê
 :*?:e;::ë
@@ -205,7 +205,7 @@
 :*?:c;::ç
 :*?:oe<::œ
 :*?:ae<::æ
-
+#Hotstring x b0
 ; les abréviations
 ; the prefix '>' is used when an abbreviation can also be used without expansion
 ::adm::clipSend("à demain")
@@ -405,8 +405,9 @@
 ;							Autocorrect - Japanese								;
 ;*******************************************************************************;
 
-:*:argt::ありがとう
-:*:gbtn::頑張ってね
-:*:gzms::ございます
-:*:mtn::またね
-:*:omdt::おめでとう
+:*:argt::clipSend("ありがとう")
+:*:gbtn::clipSend("頑張ってね")
+:*:gzms::clipSend("ございます")
+:*:mtn::clipSend("またね")
+:*:omdt::clipSend("おめでとう")
+
