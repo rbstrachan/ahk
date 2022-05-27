@@ -8,6 +8,9 @@
 		},
 		{
 			"path": "..\\..\\..\\..\\.vscode"
+		},
+		{
+			"path": "..\\..\\..\\..\\..\\..\\Program Files\\AutoHotkey"
 		}
 	]
 }
