@@ -2,10 +2,20 @@
 notable changes to this repository are documented here
 
 # upcoming releases
-## `0.2.0`
+## `0.3.3`
 ### added
 - `code/functions`
 	- [`all.ahk`](code/functions/all.ahk) — all functions in one script for easy `#Import`ing
+
+### updated
+- `code/functions/clipSend.ahk`
+	- added `fastReplace` function parameter. `clipSend` now highlights the target word before pasting the clipboard. faster than `send()`'s default replacement method. requires `b0` hotstring option.
+
+### changed
+- `code/functions/clipSend.ahk`
+	- `untilRevert` parameter default increased to `5000ms` to prevent the `clipBack()` function from inadvertantly interuppting keystrokes
+	- `clipSend` is no longer written on a (pseudo) single line to prevent keystrokes being interrupted by delays in previously executed code
+	- `clipSend` now appends the hotstring's `A_EndChar` if the `endChar` function parameter is not set
 
 <br>
 
