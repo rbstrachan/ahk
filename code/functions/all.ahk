@@ -5,6 +5,7 @@ clipSend(toSend, endChar := "", persistent := False, fastReplace := True, untilR
 	send((fastReplace ? "^+{Left}^v" : "^v"))							; selects the previous word and pastes the clipboard
 	(!persistent ? clipBack() : False)									; restores the clipboard if 'persistent' parameter is 'false'
 
+	; restores the keyboard after it has been hijacked
 	clipBack() => setTimer(() => A_Clipboard := prevClip, -untilRevert)
 }
 
