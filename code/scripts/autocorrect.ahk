@@ -35,7 +35,7 @@
 :*:>uk::clipSend("United Kingdom")
 :*:>us::clipSend("United States")
 :*:>v2::clipSend("~~you wouldn't have this issue in v2~~")
-:*:tho::clipSend("though")
+::tho::clipSend("though")
 
 ; autocomplete parenthesis and quote marks outside of VSC
 #HotIf !winActive("Visual Studio Code")
@@ -395,6 +395,7 @@
 ::tembete::clipSend("t'embête")
 ::tentends::clipSend("t'entends")
 ::tenvoyer::clipSend("t'envoyer")
+::tetais::clipSend("t'étais")
 ::tutilises::clipSend("t'utilises")
 :*:men*::clipSend("m'en ")
 :*:quelle*::clipSend("qu'elle ")
