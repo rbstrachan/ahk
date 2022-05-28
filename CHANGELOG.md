@@ -1,8 +1,12 @@
 # changelog
 notable changes to this repository are documented here
-
+<!--
 # upcoming releases
-## `0.8.18`
+<br>
+-->
+
+# current release
+## `0.8.18` 2022-05-28
 ### added
 - `code/functions`
 	- [`all.ahk`](code/functions/all.ahk) — all functions in one script for easy `#Import`ing
@@ -44,11 +48,11 @@ notable changes to this repository are documented here
 
 ### removed
 - `code/functions/fileSearch.ahk`
-	- `shouldOpen` function parameter. replaced by a `ContextMenu`.
+	- `shouldOpen` function parameter. replaced with `ContextMenu`.
 
 <br>
 
-# current release
+# previous releases
 ## `0.1.0` — 2022-05-27
 ### added
 - `code/hotkeys`
@@ -66,9 +70,6 @@ notable changes to this repository are documented here
 ### updated
 - `backups/default.code-workspace`
 
-<br>
-
-# previous releases
 ## `0.1.0-beta` — 2022-05-27
 ### added
 - [`changelog`](CHANGELOG.md)
