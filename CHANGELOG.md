@@ -1,9 +1,37 @@
 # changelog
 notable changes to this repository are documented here
+
 <!--
-# upcoming releases
-<br>
+`### added` for new features
+`### updated` for existing features that have new functionality
+`### changed` for changes in existing functionality
+`### deprecated` for soon-to-be removed features
+`### removed` for now removed features
+`### fixed` for any bug fixes
+`### security` in case of vulnerabilities
 -->
+
+# upcoming releases
+## `0.10.4`
+### added
+- `code/experiments`
+	- [`omnibox.ahk`](code/experiments/omnibox.ahk) — an experimental version of [@axlefublr](@axlefublr)'s 'runner'.
+
+### updated
+- `code/scripts/autocorrect.ahk`
+	- added `tetais` → `t'étais`
+
+### changed
+- `code/hotkeys/hotkeys.ahk`
+	- rempped `#r` hotkey from `return` to `omnibox()`
+	- rempped `F3` hotkey from `return` to `omnibox()`
+	- rempped `F6` hotkey from `return` to `fileSearch()`
+
+### fixed
+- `code/hotkeys/hotkeys.ahk`
+	- added missing virtual key comment labels for `setTrans()` hotkeys
+
+<br>
 
 # current release
 ## `0.8.18` 2022-05-28
@@ -118,13 +146,3 @@ notable changes to this repository are documented here
 
 ---
 format based on [keep a changelog](https://keepachangelog.com/)
-
-<!--
-`### added` for new features
-`### updated` for existing features that have new functionality
-`### changed` for changes in existing functionality
-`### deprecated` for soon-to-be removed features
-`### removed` for now removed features
-`### fixed` for any bug fixes
-`### security` in case of vulnerabilities
--->
