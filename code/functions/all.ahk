@@ -60,8 +60,8 @@ fileSearch(caseSense := False) {
 	}
 
 	container.show("W" A_ScreenWidth/2 " H" 2/3*A_ScreenHeight)				; set the size of the container gui window
-	container.onEvent("Close", (*) => container.destroy())					; destroy the container if closed
-	container.onEvent("Escape", (*) => container.destroy())					; destroy the container if escaped
+	container.onEvent("Close", (*) => container.destroy())					; destroy the container when closed
+	container.onEvent("Escape", (*) => container.destroy())					; destroy the container when escaped
 	container.onEvent("Size", guiSize)										; call guiSize() when container window is resized or has it's minMax state toggled
 	foundList.onEvent("DoubleClick", runFileFolder)							; call runFileFolder() if and item it double-clicked
 	foundList.onEvent("ContextMenu", showContextMenu)						; call showContextMenu() if an item is right-clicked
