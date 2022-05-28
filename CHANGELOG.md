@@ -15,7 +15,7 @@ notable changes to this repository are documented here
 ## `0.10.4`
 ### added
 - `code/experiments`
-	- [`omnibox.ahk`](code/experiments/omnibox.ahk) — an experimental version of [@axlefublr](@axlefublr)'s 'runner'.
+	- [`omnibox.ahk`](code/experiments/omnibox.ahk) — an experimental version of [@axlefublr](https://github.com/axlefublr)'s 'runner'.
 
 ### updated
 - `code/scripts/autocorrect.ahk`
@@ -23,9 +23,9 @@ notable changes to this repository are documented here
 
 ### changed
 - `code/hotkeys/hotkeys.ahk`
-	- rempped `#r` hotkey from `return` to `omnibox()`
-	- rempped `F3` hotkey from `return` to `omnibox()`
-	- rempped `F6` hotkey from `return` to `fileSearch()`
+	- remapped `#r` hotkey from `return` to `omnibox()`
+	- remapped `F3` hotkey from `return` to `omnibox()`
+	- remapped `F6` hotkey from `return` to `fileSearch()`
 
 ### fixed
 - `code/hotkeys/hotkeys.ahk`
