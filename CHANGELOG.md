@@ -2,7 +2,7 @@
 notable changes to this repository are documented here
 
 # upcoming releases
-## `0.3.3`
+## `0.8.18`
 ### added
 - `code/functions`
 	- [`all.ahk`](code/functions/all.ahk) — all functions in one script for easy `#Import`ing
@@ -10,12 +10,41 @@ notable changes to this repository are documented here
 ### updated
 - `code/functions/clipSend.ahk`
 	- added `fastReplace` function parameter. `clipSend` now highlights the target word before pasting the clipboard. faster than `send()`'s default replacement method. requires `b0` hotstring option.
+- `code/functions/fileSearch.ahk`
+	- added comments
+	- added a context menu via `ListView.onEvent("ContextMenu", showContextMenu)`. replaces the `shouldOpen` function parameter.
+	- `caseSense` is now set automatically if it's function parameter is set to `auto` and `search.value` contains non-stardard characters
+	- `fileSearch` now also returns folders
+	- the context menu option `Show in folder` now highlights the relevant file or folder
 
 ### changed
 - `code/functions/clipSend.ahk`
 	- `untilRevert` parameter default increased to `5000ms` to prevent the `clipBack()` function from inadvertantly interuppting keystrokes
-	- `clipSend` is no longer written on a (pseudo) single line to prevent keystrokes being interrupted by delays in previously executed code
+	- `clipSend` is no longer written on a (pseudo) single line to prevent keystrokes from being interrupted if the execution of previous code is delayed
 	- `clipSend` now appends the hotstring's `A_EndChar` if the `endChar` function parameter is not set
+- `code/functions/fileSearch.ahk`
+	- the `File Search` input box now
+		- has preset dimentions, preventing it from creating unnecessarily large windows
+		- gives example searches in the edit field
+		- immediately returns if `input.value` is blank instead of showing an empty GUI
+	- `caseSense` function parameter default changed to `auto`
+	- renamed `found` GUI to `container` to more accurately represent it's function
+	- the `container` GUI
+		- is no longer `AlwaysOnTop`
+		- now obtains it's initial dimentions dynamically from `A_ScreenWidth` and `A_ScreenHeight` 
+		- can now be resized
+		- can now be closed by pressing `Escape`
+		- is now destroyed when closed instead of hidden
+	- the `foundList` GUI now
+		- has a minimum amount of memory permanantely allocated to improve performance
+		- reports `A_LoopFileName`, `A_LoopFileDir` and `A_LoopFileExt` instead of just `A_LoopFileFullPath`
+		- automatically resizes columns to fit the data they contain
+	- an information message box is now displayed if `search.value` produces no matches instead of displaying an empty GUI
+	- an error message is now displayed if `fileSearch` fails to open a file when requested, either by double-click or via the context menu
+
+### removed
+- `code/functions/fileSearch.ahk`
+	- `shouldOpen` function parameter. replaced by a `ContextMenu`.
 
 <br>
 
