@@ -15,10 +15,10 @@ Insert::^!Tab
 ; xp-pen monitor virtual keys
  F2::return										; XP-PEN Virtual Key 2	- Unset
  F1::return										; XP-PEN Virtual Key 1	- Unset
- F3::return										; XP-PEN Virtual Key 3	- Unset
- F4::setTrans(False)							; XP-PEN Virtual Key 4	- Unset
- F5::setTrans()									; XP-PEN Virtual Key 5	- Unset
- F6::return										; XP-PEN Virtual Key 6	- Unset
+ F3::omnibox()									; XP-PEN Virtual Key 3	- Omnibox
+ F4::setTrans(False)							; XP-PEN Virtual Key 4	- Decrease Window Transparency
+ F5::setTrans()									; XP-PEN Virtual Key 5	- Increase Window Transparency
+ F6::fileSearch()								; XP-PEN Virtual Key 6	- File Search
  F7::setVideoSizeSpeed()						; XP-PEN Virtual Key 7	- Set YouTube Video Size & Speed
  F8::setLang("ja")								; XP-PEN Virtual Key 8	- Set Lang to Japanese
  F9::setLang("fr")								; XP-PEN Virtual Key 9	- Set Lang to French
@@ -44,6 +44,7 @@ MButton::send("^!{Tab}")				; show the window switcher
 ^+c::copySearch()
 #WheelDown::setTrans()
 #WheelUp::setTrans(False,, 50)
+#r::omnibox()
 
 ; individual hotkeys
 ; refresh the 'PenTablet' process after it hangs
