@@ -2,7 +2,15 @@
 notable changes to this repository are documented here
 
 # upcoming releases
-## `0.1.0`
+## `0.2.0`
+### added
+- `code/functions`
+	- [`all.ahk`](code/functions/all.ahk) — all functions in one script for easy `#Import`ing
+
+<br>
+
+# current release
+## `0.1.0` — 2022-05-27
 ### added
 - `code/hotkeys`
 	- [`readme.md`](code/hotkeys/README.md)
@@ -21,7 +29,7 @@ notable changes to this repository are documented here
 
 <br>
 
-# current release
+# previous releases
 ## `0.1.0-beta` — 2022-05-27
 ### added
 - [`changelog`](CHANGELOG.md)
