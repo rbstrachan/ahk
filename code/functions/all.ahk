@@ -152,18 +152,26 @@ getRawHotkey(hotkey) {
 	return str(rawHotkey[1])						; accesses the capture group and returns it as a string
 }
 
+getSUTOMList(wordLength, startingLetter) {
+	rqst := comObject("WinHttp.WinHttpRequest.5.1")
+	rqst.open("GET", "https://www.liste-de-mots.com/mots-nombre-lettre/" wordLength "/" startingLetter "/")
+	rqst.send(), rqst.waitForResponse()
+	reponseArray := strSplit(rqst.responseText, "`n")
+	return strReplace(subStr(reponseArray[83], 3, -4), ", ", "`n")
+}
+
 ; force a given window to have active status
 makeActiveWindow(window) => (winExist(window) ? winActivate(window) : False)
 
 ; open wordle links in a new Chrome
 openWordle() {
-	run("chrome.exe https://sutom.nocle.fr/ --new-window")
+	winWait(run("chrome.exe https://sutom.nocle.fr/ --new-window"))
 	run("https://taximanli.github.io/kotobade-asobou/")
 	run("https://www.nytimes.com/games/wordle/index.html")
-	run("https://swag.github.io/evil-wordle/")
 	run("https://logle.app/previous.php")
 	run("https://flaggle.app/")
 	run("https://worldle.teuteuf.fr/")
+	run("https://swag.github.io/evil-wordle/")
 }
 
 ; set input language
