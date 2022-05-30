@@ -9,10 +9,14 @@ notable changes to this repository are documented here
 `### removed` for now removed features
 `### fixed` for any bug fixes
 `### security` in case of vulnerabilities
--->
 
 # upcoming releases
-## `0.10.4`
+
+<br>
+-->
+
+# current release
+## `0.10.5` — 2022-05-30
 ### added
 - `code/experiments`
 	- [`omnibox.ahk`](code/experiments/omnibox.ahk) — an experimental version of [@axlefublr](https://github.com/axlefublr)'s 'runner'.
@@ -30,11 +34,13 @@ notable changes to this repository are documented here
 ### fixed
 - `code/hotkeys/hotkeys.ahk`
 	- added missing virtual key comment labels for `setTrans()` hotkeys
+- `code/scrips/autocorrect.ahk`
+	- typing `e\`` once again correctly produces `è`
 
 <br>
 
-# current release
-## `0.8.18` 2022-05-28
+# previous releases
+## `0.8.18` — 2022-05-28
 ### added
 - `code/functions`
 	- [`all.ahk`](code/functions/all.ahk) — all functions in one script for easy `#Import`ing
@@ -78,9 +84,6 @@ notable changes to this repository are documented here
 - `code/functions/fileSearch.ahk`
 	- `shouldOpen` function parameter. replaced with `ContextMenu`.
 
-<br>
-
-# previous releases
 ## `0.1.0` — 2022-05-27
 ### added
 - `code/hotkeys`
