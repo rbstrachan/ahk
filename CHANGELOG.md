@@ -9,11 +9,54 @@ notable changes to this repository are documented here
 `### removed` for now removed features
 `### fixed` for any bug fixes
 `### security` in case of vulnerabilities
+-->
 
 # upcoming releases
+## `0.11.24`
+### added
+- `code/functions`
+	- [`getSUTOMList.ahk`](code/functions/getSUTOMList.ahk) — gets a list of french words according to their length and starting character for use in the wordle-like game SUTOM
+
+### updated
+- `code/experiments/omnibox.ahk`
+	- removed the title bar and window border with `-caption`
+	- added a background image and set the `omnibox.backColor` to avoid flickering on load
+	- the font
+		- is now size 20
+		- is pink
+		- matches VS Code's font
+	- the edit box
+		- no longer has a word limit
+		- now forces all lowercase letters
+		- no longer has a border
+		- now outputs to `omniEdit` instead of `omniInput`
+	- the omnibox is now
+		- wider to allow for longer queries to be easily entered
+		- displayed dynamically at `A_ScreenHeight/4` instead of at the top of the screen
+	- variable `output` renamed to `editOut`
+	- added `spaceCount` and `wordCount` variables
+	- added a dynamically-generated regEx pattern
+	- added a switch which uses the regex output to implement
+		- toggling discord
+		- opening files and folders
+		- opening github links
+		- translating strings
+- `code/scripts/autocorrect.ahk`
+	- added `davoir` → `d'avoir`
+	- added `japprends` → `j'apprends`
+- `code/functions/all.ahk`
+	- added `getSUTOMList.ahk`
+
+### changed
+- `code/hotkeys/hotkeys.ahk`
+	- removed `#r` → `omnibox()` remap
+	- added `!Space` → `omnibox()` remap 
+
+### fixed
+- `code/functions/openWorldle.ahk` and `all.ahk`
+	- `openWordle()` now waits until a new chrome window exists before opening links to prevent bombarding the wrong window
 
 <br>
--->
 
 # current release
 ## `0.10.5` — 2022-05-30
@@ -27,7 +70,7 @@ notable changes to this repository are documented here
 
 ### changed
 - `code/hotkeys/hotkeys.ahk`
-	- remapped `#r` hotkey from `return` to `omnibox()`
+	- added `#r` → `omnibox()` remap
 	- remapped `F3` hotkey from `return` to `omnibox()`
 	- remapped `F6` hotkey from `return` to `fileSearch()`
 
@@ -35,7 +78,7 @@ notable changes to this repository are documented here
 - `code/hotkeys/hotkeys.ahk`
 	- added missing virtual key comment labels for `setTrans()` hotkeys
 - `code/scrips/autocorrect.ahk`
-	- typing `e\`` once again correctly produces `è`
+	- typing <code>e\`</code> once again correctly produces `è`
 
 <br>
 
