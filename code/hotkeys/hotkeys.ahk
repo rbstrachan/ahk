@@ -44,7 +44,7 @@ MButton::send("^!{Tab}")				; show the window switcher
 ^+c::copySearch()
 #WheelDown::setTrans()
 #WheelUp::setTrans(False,, 50)
-#r::omnibox()
+!Space::omnibox()
 
 ; individual hotkeys
 ; refresh the 'PenTablet' process after it hangs
